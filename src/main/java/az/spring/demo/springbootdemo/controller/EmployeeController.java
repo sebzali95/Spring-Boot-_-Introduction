@@ -1,6 +1,7 @@
 package az.spring.demo.springbootdemo.controller;
 
 
+import az.spring.demo.springbootdemo.dto.EmployeeDto;
 import az.spring.demo.springbootdemo.model.Employee;
 import az.spring.demo.springbootdemo.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +18,7 @@ public class EmployeeController {
     private final EmployeeService employeeService;
 
     @GetMapping("/employees")
-    public List<Employee> getEmployees() {
+    public List<EmployeeDto> getEmployees() {
         return employeeService.getEmployees();
     }
 
